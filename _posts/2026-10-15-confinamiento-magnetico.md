@@ -11,7 +11,6 @@ header:
 author_profile: false
 ---
 
-<img src="{{ '/assets/images/charla.png' | relative_url }}" alt="Speaker miniature" style="float: right; width: 180px; max-width: 35%; margin-left: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
 
 **Speaker:** Dra. Galina Avdeeva  
 **Position and Institution:** Oak Ridge Associated Universities (General Atomics)  
