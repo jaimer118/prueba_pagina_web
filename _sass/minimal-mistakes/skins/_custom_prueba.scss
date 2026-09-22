@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Skin FUSION-EP para Minimal Mistakes
+   ========================================================================== */
+
+/* Colores de marca */
+$primary-color: #0b2545 !default;      // Azul marino oscuro institucional
+$info-color:    #134074 !default;      // Azul medio
+$link-color:    #005b96 !default;      // Azul de hipervínculos
+$link-color-hover: darken($link-color, 15%) !default;
+$focus-color:   $primary-color !default;
+
+/* Fondos y estructura */
+$background-color: #ffffff !default;
+$code-background-color: #f4f6f8 !default;
+$border-color: #e2e8f0 !default;
+
+/* Textos */
+$text-color: #1e293b !default;
+$muted-text-color: #64748b !default;
+
+/* Botones principales y estados activos */
+$btn-primary-color: $primary-color !default;
+
+/* Barras de navegación y cabecera */
+$masthead-link-color: #0b2545 !default;
+$masthead-link-color-hover: #005b96 !default;
+$navicon-link-color-hover: $primary-color !default;
+
+/* Importar la base del tema aplicando estas variables */
+@import "minimal-mistakes/skins/default";
