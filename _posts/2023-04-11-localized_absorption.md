@@ -2,7 +2,7 @@
 title: "Localized absorption of laser energy by magnetized plasma target"
 date: 2023-04-11
 categories:
-  - charlas
+  - talks
 tags:
   - fusion
   - fisica-plasmas
