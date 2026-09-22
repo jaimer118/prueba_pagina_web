@@ -2,7 +2,7 @@
 title: "Quiénes Somos"
 layout: single
 permalink: /equipo/
-author_profile: false
+author_profile: true
 ---
 
 Somos un grupo de estudiantes e investigadores apasionados por la divulgación de la energía de fusión.
