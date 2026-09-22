@@ -8,7 +8,7 @@ header:
   
   overlay_image: /assets/images/fondo.webp
   actions:
-    - label: "Ver próximas charlas"
+    - label: "See upcoming talks"
       url: "/talks/"
 author_profile: false
 ---
