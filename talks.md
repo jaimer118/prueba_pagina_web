@@ -1,40 +1,43 @@
 ---
 title: "Charlas y Seminarios"
 layout: single
-permalink: /talks/
+permalink: /charlas/
+classes: wide
 author_profile: false
 ---
 
 Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*.
 
-<div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+<div style="display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2rem;">
 {% for post in site.posts %}
-  <div style="display: flex; gap: 1.5rem; align-items: flex-start; border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem;">
-  
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; border-bottom: 1px solid #eaeaea; padding-bottom: 2rem;">
+    
+    <!-- Miniatura Teaser Más Grande -->
     {% if post.header.teaser %}
-      <div style="flex-shrink: 0; width: 180px;">
+      <div style="flex: 0 0 280px; max-width: 100%;">
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); object-fit: cover;">
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }}" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); object-fit: cover; aspect-ratio: 16/9; display: block;">
         </a>
       </div>
     {% endif %}
 
-    <div style="flex-grow: 1;">
-      <h3 style="margin-top: 0; margin-bottom: 0.5rem;">
+    <!-- Contenido Expandido -->
+    <div style="flex: 1 1 320px;">
+      <h2 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.45rem;">
         <a href="{{ post.url | relative_url }}" style="text-decoration: none;">{{ post.title }}</a>
-      </h3>
+      </h2>
       
-      <p style="font-size: 0.9em; color: #666; margin-bottom: 0.8rem;">
+      <p style="font-size: 0.95em; color: #666; margin-bottom: 0.8rem;">
         📅 {{ post.date | date: "%d de %B de %Y" }}
       </p>
 
       {% if post.excerpt %}
-        <div style="margin-bottom: 1rem; font-size: 0.95em;">
+        <div style="margin-bottom: 1.2rem; font-size: 1em; line-height: 1.5;">
           {{ post.excerpt | markdownify }}
         </div>
       {% endif %}
 
-      <a href="{{ post.url | relative_url }}" class="btn btn--primary btn--small">Más detalles y registro</a>
+      <a href="{{ post.url | relative_url }}" class="btn btn--primary">Más detalles y registro</a>
     </div>
 
   </div>
