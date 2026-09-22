@@ -27,4 +27,4 @@ Abstract of the talk:
 ---
 
 ### About the project
-*Fusion EP Talks* is.... explanation about the project
+*Fusion EP Talks* is brought to you by the alumni community of the European Master In Fusion Science and Engineering physics. Our mission is to do student-led webinars, expert talks and panels on the development of nuclear fusion as an energy source that connect scholars, engineers and enthusiasts around the world.
