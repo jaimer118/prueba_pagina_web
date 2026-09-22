@@ -7,6 +7,8 @@ author_profile: true
 
 Aquí encontrarás el registro de todas nuestras sesiones pasadas y futuras.
 
+<div class="entries-grid">
 {% for post in site.posts %}
-  {% include archive-single.html %}
+  {% include archive-single.html type="grid" %}
 {% endfor %}
+</div>
