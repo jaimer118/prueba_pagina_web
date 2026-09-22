@@ -8,6 +8,7 @@ tags:
   - fisica-plasmas
 header:
   teaser: /assets/images/charla.png
+author_profile: false
 ---
 
 **Ponente:** Dra. Galina Avdeeva
