@@ -24,7 +24,7 @@ author_profile: false
   }
 </style>
 
-Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*.
+Check the different talks and seminars organized by Fusion EP Talks.
 
 <div style="display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2rem; width: 100%;">
 {% for post in site.posts %}
