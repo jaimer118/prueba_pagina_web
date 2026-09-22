@@ -11,13 +11,28 @@ header:
 author_profile: false
 ---
 
-**Speaker:** Dra. Galina Avdeeva
-**Position and Institution:** Oak Ridge Associated Universities (General Atomics)
-**Slides:** 
+<img src="{{ '/assets/images/charla.png' | relative_url }}" alt="Speaker miniature" style="float: right; width: 180px; max-width: 35%; margin-left: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
 
-![Talk miniature]({{ '/assets/images/charla.png' | relative_url }}){: .align-center style="max-width: 500px;"}
+**Speaker:** Dra. Galina Avdeeva  
+**Position and Institution:** Oak Ridge Associated Universities (General Atomics)  
+**Slides:** [Download Presentation (PDF)](#){: .btn .btn--info .btn--small}  
+**Recording:** Available below  
+
+<div style="clear: both; margin-top: 1.5rem;"></div>
+
+### Recording
+
+{% include video id="JwrlB9ZOPjc" provider="youtube" %}
+
+<p style="text-align: center; margin-top: 1rem;">
+  <a href="https://www.youtube.com/watch?v=JwrlB9ZOPjc" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
+    <i class="fab fa-youtube"></i> Open directly on YouTube
+  </a>
+</p>
+
+---
 
 ### Abstract
-A numerical plasma modeling provides the most accurate representation of the experimental reality when various models are integrated in a way that enables the determination of the most consistent solution. The OMFIT framework provides a convenient user-friendly interface to combine various codes into an integrated workflow with opportunities for the device specification, many options of data visualization and modeling/experiment comparison. In this work, such a workflow: from an equilibrium reconstruction to the plasma profiles prediction will be demonstrated in applications to a heat plasma transport study on the low aspect ratio NSTX tokamak. Spherical tokamaks are one of the leading concepts for the design of future fusion power pilot plants and the analysis of NSTX plasma helps to determine the optimal aspect ratio for a next-step fusion facility.
+A numerical plasma modeling provides the most accurate representation of the experimental reality when various models are integrated in a way that enables the determination of the most consistent solution. The OMFIT framework provides a convenient user-friendly interface to combine various codes into an integrated workflow with opportunities for the device specification, many options of data visualization and modeling/experiment comparison.
 
-[Watch YouTube video](https://www.youtube.com/watch?v=JwrlB9ZOPjc){: .btn .btn--danger .btn--large target="_blank" rel="noopener noreferrer"}
+In this work, such a workflow: from an equilibrium reconstruction to the plasma profiles prediction will be demonstrated in applications to a heat plasma transport study on the low aspect ratio NSTX tokamak. Spherical tokamaks are one of the leading concepts for the design of future fusion power pilot plants and the analysis of NSTX plasma helps to determine the optimal aspect ratio for a next-step fusion facility.
