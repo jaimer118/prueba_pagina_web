@@ -1,13 +1,13 @@
 ---
-title: "Charlas y Seminarios"
+title: "Talks"
 layout: single
-permalink: /charlas/
+permalink: /talks/
 classes: wide
 author_profile: false
 ---
 
 <style>
-  /* Elimina el margen derecho reservado y expande el contenedor al 100% */
+  
   .page {
     width: 100% !important;
     padding-right: 0 !important;
@@ -30,7 +30,7 @@ Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*
 {% for post in site.posts %}
   <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; border-bottom: 1px solid #eaeaea; padding-bottom: 2rem; width: 100%;">
     
-    <!-- Miniatura Teaser Ampliada -->
+    
     {% if post.header.teaser %}
       <div style="flex: 0 0 320px; max-width: 100%;">
         <a href="{{ post.url | relative_url }}">
@@ -39,7 +39,7 @@ Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*
       </div>
     {% endif %}
 
-    <!-- Contenido Expandido al 100% -->
+    
     <div style="flex: 1 1 350px;">
       <h2 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.5rem;">
         <a href="{{ post.url | relative_url }}" style="text-decoration: none;">{{ post.title }}</a>
