@@ -3,12 +3,11 @@ title: "Charlas y Seminarios"
 layout: archive
 permalink: /talks/
 author_profile: true
+entries_layout: list
 ---
 
-Aquí encontrarás el registro de todas nuestras sesiones pasadas y futuras.
+Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*.
 
-<div class="entries-grid">
 {% for post in site.posts %}
-  {% include archive-single.html type="grid" %}
+  {% include archive-single.html %}
 {% endfor %}
-</div>
