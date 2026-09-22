@@ -2,7 +2,7 @@
 title: "Charlas y Seminarios"
 layout: archive
 permalink: /talks/
-author_profile: false
+author_profile: true
 ---
 
 Aquí encontrarás el registro de todas nuestras sesiones pasadas y futuras.
