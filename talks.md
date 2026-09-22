@@ -9,5 +9,5 @@ entries_layout: list
 Consulta el catálogo de seminarios y sesiones organizadas por *Fusion EP Talks*.
 
 {% for post in site.posts %}
-  {% include archive-single.html %}
+  {% include archive-single.html type="grid" %}
 {% endfor %}
