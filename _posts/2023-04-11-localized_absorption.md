@@ -8,6 +8,7 @@ tags:
   - fisica-plasmas
 header:
   teaser: /assets/images/charla_2.png
+author_profile: false
 ---
 
 **Ponente:** Dra. Ayushi Vashistha
