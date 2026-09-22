@@ -2,7 +2,7 @@
 title: "Integrated core transport modeling of NSTX plasmas using the OMFIT workflow"
 date: 2026-10-15
 categories:
-  - charlas
+  - talks
 tags:
   - fusion
   - fisica-plasmas
