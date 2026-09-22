@@ -16,8 +16,11 @@ author_profile: false
 ## Next Talk
 
 **Title of the Talk:** Random example
+
 **Speaker:** Dra. Random Randomness (Institution / Lab / University)  
-**Fecha:** 15 de Octubre de 2026 — 17:00 CEST  
+
+**Fecha:** 15 de Octubre de 2026 — 17:00 CEST 
+
 **Lugar:** Online (Zoom)
 
 Abstract of the talk: 
