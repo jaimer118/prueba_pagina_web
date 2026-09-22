@@ -13,7 +13,7 @@ author_profile: false
 
 **Speaker:** Dra. Galina Avdeeva
 **Position and Institution:** Oak Ridge Associated Universities (General Atomics)
-**Recording:** 
+**Recording:** [Watch Youtube video](#https://www.youtube.com/watch?v=JwrlB9ZOPjc)
 
 ![Talk miniature]({{ '/assets/images/charla.png' | relative_url }}){: .align-center style="max-width: 500px;"}
 
