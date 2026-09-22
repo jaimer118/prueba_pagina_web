@@ -1,6 +1,6 @@
 # main links
 main:
-  - title: "Inicio"
+  - title: "Home"
     url: /
   - title: "Talks"
     url: /talks/
