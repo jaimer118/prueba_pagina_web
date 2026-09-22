@@ -5,7 +5,7 @@ categories:
   - talks
 tags:
   - fusion
-  - fisica-plasmas
+  - plasma-physics
 header:
   teaser: /assets/images/charla.png
 author_profile: false
