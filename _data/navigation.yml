@@ -2,9 +2,9 @@
 main:
   - title: "Inicio"
     url: /
-  - title: "Charlas"
+  - title: "Talks"
     url: /talks/
-  - title: "Equipo"
-    url: /equipo/
-  - title: "Contacto"
-    url: /contacto/
+  - title: "Team"
+    url: /team/
+  - title: "Contact"
+    url: /contact/
