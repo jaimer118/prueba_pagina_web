@@ -1,7 +1,7 @@
 ---
 title: "Charlas y Seminarios"
 layout: single
-permalink: /charlas/
+permalink: /talks/
 classes: wide
 author_profile: false
 ---
