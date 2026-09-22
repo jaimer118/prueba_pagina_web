@@ -1,7 +1,7 @@
 ---
 title: "Talks"
 layout: single
-permalink: /talks
+permalink: /talks/
 classes: wide
 author_profile: false
 ---
