@@ -7,7 +7,7 @@ tags:
   - fusion
   - fisica-plasmas
 header:
-  teaser: /assets/images/miniatura-ponente.jpg
+  teaser: /assets/images/charla.png
 ---
 
 **Ponente:** Dra. Nombre Apellido  
