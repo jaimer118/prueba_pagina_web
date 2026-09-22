@@ -1,85 +1,74 @@
-/* ==========================================================================
-   Skin Personalizado FUSION-EP: Verde Corporativo + Amarillo Solar
-   ========================================================================== */
+/* Skin Oficial FUSION-EP: Verde Corporativo y Amarillo Solar */
 
-/* Colores de identidad extraídos de los logos */
-$brand-green:  #009639; /* Verde Fusion principal */
-$brand-yellow: #f2b200; /* Amarillo/Dorado solar del arco */
-$brand-dark:   #2b2b2b; /* Gris oscuro para textos principales sobre fondos claros */
-$brand-gray:   #717171; /* Gris neutro secundario */[cite: 1]
+$brand-green:  #009639;
+$brand-yellow: #f2b200;
+$brand-dark:   #2b2b2b;
+$brand-gray:   #717171;
 
-/* Paleta de Minimal Mistakes */
+/* Variables principales de Minimal Mistakes */
 $primary-color:    $brand-green !default;
 $success-color:    $brand-green !default;
 $warning-color:    $brand-yellow !default;
 $info-color:       #1a5c32 !default;
 
-/* Enlaces: Verde legible que pasa a Amarillo Solar al pasar el ratón */
+/* Enlaces */
 $link-color:       $brand-green !default;
-$link-color-hover: darken($brand-yellow, 10%) !default;
+$link-color-hover: #c99300 !default;
 $focus-color:      $brand-yellow !default;
 
-/* Fondos y estructura general */
+/* Fondos y estructura */
 $background-color:      #ffffff !default;
 $code-background-color: #f7f9fa !default;
 $border-color:          #e5e7eb !default;
 
-/* Textos sobre fondo claro (gris oscuro de alta legibilidad) */
+/* Textos sobre fondo claro */
 $text-color:       $brand-dark !default;
 $muted-text-color: $brand-gray !default;
 
-/* Barra superior de navegación (Masthead) */
+/* Barra superior de navegacion */
 $masthead-link-color:       $brand-dark !default;
 $masthead-link-color-hover: $brand-green !default;
 $navicon-link-color-hover:  $brand-green !default;
 
-/* Importar la base del tema */
 @import "minimal-mistakes/skins/default";
 
-/* ==========================================================================
-   Sobreescritura específica para forzar contraste y uso de Verde y Amarillo
-   ========================================================================== */
-
-/* Botón principal (.btn--primary): Fondo verde corporativo con texto SIEMPRE blanco */
+/* Reglas especificas para forzar contraste y colores */
 .btn--primary {
-  background-color: $brand-green !important;
+  background-color: #009639 !important;
   color: #ffffff !important;
-  border-color: $brand-green !important;
+  border-color: #009639 !important;
 
   &:hover {
-    background-color: darken($brand-green, 8%) !important;
-    border-color: darken($brand-green, 8%) !important;
+    background-color: #00752c !important;
+    border-color: #00752c !important;
     color: #ffffff !important;
   }
 }
 
-/* Botón de aviso/acento (.btn--warning): Fondo amarillo solar con texto blanco o contraste oscuro */
 .btn--warning {
-  background-color: $brand-yellow !important;
+  background-color: #f2b200 !important;
   color: #ffffff !important;
-  border-color: $brand-yellow !important;
+  border-color: #f2b200 !important;
 
   &:hover {
-    background-color: darken($brand-yellow, 8%) !important;
-    border-color: darken($brand-yellow, 8%) !important;
+    background-color: #c99300 !important;
+    border-color: #c99300 !important;
     color: #ffffff !important;
   }
 }
 
-/* Forzar que los textos dentro de fondos oscuros (banners/overlays) sean siempre blancos */
 .page__hero--overlay .page__title,
 .page__hero--overlay .page__lead,
 .page__hero--overlay p {
   color: #ffffff !important;
 }
 
-/* Paginación y botones activos: verde de fondo y texto blanco */
 .pagination--pager {
-  color: $brand-green !important;
-  border-color: $brand-green !important;
+  color: #009639 !important;
+  border-color: #009639 !important;
 
   &:hover {
-    background-color: $brand-green !important;
+    background-color: #009639 !important;
     color: #ffffff !important;
   }
 }
