@@ -8,23 +8,29 @@ tags:
   - plasma-physics
 header:
   teaser: /assets/images/charla.png
+speaker: "Dra. Galina Avdeeva"
+affiliation: "Oak Ridge Associated Universities (General Atomics)"
+youtube_id: "JwrlB9ZOPjc"
+slides_url: "https://ejemplo.com/diapositivas.pdf"
 author_profile: false
 ---
 
 
-**Speaker:** Dra. Galina Avdeeva  
-**Position and Institution:** Oak Ridge Associated Universities (General Atomics)  
-**Slides:** [Download Presentation (PDF)](#){: .btn .btn--info .btn--small}  
-**Recording:** Available below  
+
+**Speaker:** {{ page.speaker }}  
+**Position and Institution:** {{ page.affiliation }}  
+{% if page.slides_url %}
+**Slides:** [Download Presentation (PDF)]({{ page.slides_url }}){: .btn .btn--info .btn--small target="_blank"}  
+{% endif %} 
 
 <div style="clear: both; margin-top: 1.5rem;"></div>
 
 ### Recording
 
-{% include video id="JwrlB9ZOPjc" provider="youtube" %}
+{% include video id=page.youtube_id provider="youtube" %}
 
 <p style="text-align: center; margin-top: 1rem;">
-  <a href="https://www.youtube.com/watch?v=JwrlB9ZOPjc" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
+  <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
     <i class="fab fa-youtube"></i> Open directly on YouTube
   </a>
 </p>
