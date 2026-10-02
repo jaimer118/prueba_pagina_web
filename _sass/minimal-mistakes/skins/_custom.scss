@@ -74,19 +74,20 @@ $navicon-link-color-hover:  $brand-green !default;
 }
 
 /* ==========================================================================
-   Wider Reading Column (Balanced width for Posts & Standard Pages)
+   Comprehensive Layout Control for Minimal Mistakes
    ========================================================================== */
 
-/* Expand the main wrapper to allow broader content */
+/* 1. Global #main wrapper: allow it to scale fully so /talks/ can go edge-to-edge */
 #main {
-  max-width: 1100px !important;
+  width: 100% !important;
+  max-width: 1400px !important; /* High upper limit for large displays */
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
 
-/* Remove sidebar reservations when author_profile is false */
+/* Remove default float and empty sidebar margins when author_profile: false */
 .page {
   width: 100% !important;
   padding-right: 0 !important;
@@ -99,11 +100,27 @@ $navicon-link-color-hover:  $brand-green !default;
   float: none !important;
 }
 
-/* Set the exact readable width for articles, talks, and pages */
-.page__content {
+/* 2. Fix the Home Page (layout: home uses .archive) */
+.layout--home .archive {
   width: 100% !important;
-  max-width: 950px !important; /* Increase from ~700px to 950px */
+  max-width: 1000px !important; /* Expands home page nicely */
   margin-left: auto !important;
   margin-right: auto !important;
   float: none !important;
+}
+
+/* 3. Balanced width for standard content pages (Posts, About, Contact) */
+.layout--single .page__content {
+  width: 100% !important;
+  max-width: 980px !important; /* Balanced readability */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+
+/* 4. Full-width override for Talks (classes: wide) */
+.page--wide,
+.wide .page__content,
+.layout--single.wide .page__content {
+  max-width: 100% !important;
 }
