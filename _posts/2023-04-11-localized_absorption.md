@@ -8,23 +8,27 @@ tags:
   - plasma-physics
 header:
   teaser: /assets/images/charla_2.png
+speaker: "Dra. Ayushi Vashistha"
+affiliation: "Institute For Plasma Research, India"
+youtube_id: "mKXY__lxD_c"
+slides_url: "https://ejemplo.com/diapositivas.pdf"
 author_profile: false
 ---
 
 
-**Speaker:** Dra. Ayushi Vashistha  
-**Position and Institution:** Institute For Plasma Research, India  
-**Slides:** [Download Presentation (PDF)](#){: .btn .btn--info .btn--small}  
+**Speaker:** {{ page.speaker }}  
+**Position and Institution:** {{ page.affiliation }}  
+{% if page.slides_url %}
+**Slides:** [Download Presentation (PDF)]({{ page.slides_url }}){: .btn .btn--info .btn--small target="_blank"}  
+{% endif %}
 **Recording:** Available below  
 
 <div style="clear: both; margin-top: 1.5rem;"></div>
 
-### Recording
-
-{% include video id="mKXY__lxD_c" provider="youtube" %}
+{% include video id=page.youtube_id provider="youtube" %}
 
 <p style="text-align: center; margin-top: 1rem;">
-  <a href="https://www.youtube.com/watch?v=mKXY__lxD_c" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
+  <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
     <i class="fab fa-youtube"></i> Open directly on YouTube
   </a>
 </p>
