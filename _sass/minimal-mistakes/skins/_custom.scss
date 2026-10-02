@@ -124,3 +124,16 @@ $navicon-link-color-hover:  $brand-green !default;
 .layout--single.wide .page__content {
   max-width: 100% !important;
 }
+
+/* Add to Calendar Button Styling */
+add-to-calendar-button {
+  --btn-background: #009639 !important;
+  --btn-text: #ffffff !important;
+  --btn-border: #009639 !important;
+  --btn-background-hover: #00752c !important;
+  --btn-border-hover: #00752c !important;
+  --btn-text-hover: #ffffff !important;
+  --btn-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+  --btn-radius: 6px !important;
+  --font: inherit !important;
+}
