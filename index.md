@@ -7,6 +7,7 @@ header:
   overlay_filter: "0.4"
   
   overlay_image: /assets/images/fondo.webp
+  og_image: /assets/images/site-preview.png
   actions:
     - label: "See upcoming talks"
       url: "/talks/"
