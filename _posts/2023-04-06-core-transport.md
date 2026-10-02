@@ -8,6 +8,7 @@ tags:
   - plasma-physics
 header:
   teaser: /assets/images/charla.png
+  og_image: /assets/images/charla.png
 speaker: "Dra. Galina Avdeeva"
 affiliation: "Oak Ridge Associated Universities (General Atomics)"
 youtube_id: "JwrlB9ZOPjc"
