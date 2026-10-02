@@ -144,7 +144,7 @@ author:
 # Site Footer
 footer:
   links:
-   - label: "LinkedIn"
+    - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/company/fusion-ep-talks/"
     - label: "Twitter"
