@@ -22,8 +22,8 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
 description              : "Divulgative conferences and videos about nucelar fusion and plasma physics."
-url                      :  "https://jaimer118.github.io/prueba_pagina_web/"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+url                      :  "https://jaimer118.github.io"
+baseurl                  : "/prueba_pagina_web"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     :  "/assets/images/Talks-Logo.png"
@@ -96,7 +96,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/site-preview.png"
 og_image_alt             : # Alt text for Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
