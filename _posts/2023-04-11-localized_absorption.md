@@ -21,9 +21,10 @@ author_profile: false
 {% if page.slides_url %}
 **Slides:** [Download Presentation (PDF)]({{ page.slides_url }}){: .btn .btn--info .btn--small target="_blank"}  
 {% endif %}
-**Recording:** Available below  
 
 <div style="clear: both; margin-top: 1.5rem;"></div>
+
+### Recording
 
 {% include video id=page.youtube_id provider="youtube" %}
 
