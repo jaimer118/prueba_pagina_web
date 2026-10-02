@@ -1,7 +1,7 @@
 ---
 title: "Who we are"
 layout: single
-permalink: /team/
+permalink: /about/
 author_profile: false
 ---
 
