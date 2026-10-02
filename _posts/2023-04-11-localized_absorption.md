@@ -8,6 +8,7 @@ tags:
   - plasma-physics
 header:
   teaser: /assets/images/charla_2.png
+  og_image: /assets/images/charla_2.png
 speaker: "Dra. Ayushi Vashistha"
 affiliation: "Institute For Plasma Research, India"
 youtube_id: "mKXY__lxD_c"
