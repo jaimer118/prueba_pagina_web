@@ -73,22 +73,37 @@ $navicon-link-color-hover:  $brand-green !default;
   }
 }
 
-/* Expand page wrappers across the entire site */
-/*.page {
+/* ==========================================================================
+   Wider Reading Column (Balanced width for Posts & Standard Pages)
+   ========================================================================== */
+
+/* Expand the main wrapper to allow broader content */
+#main {
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Remove sidebar reservations when author_profile is false */
+.page {
   width: 100% !important;
-  max-width: 100% !important;
   padding-right: 0 !important;
   float: none !important;
 }
 
 .page__inner-wrap {
   width: 100% !important;
-  max-width: 1200px !important; 
-  margin: 0 auto !important;
+  max-width: 100% !important;
   float: none !important;
 }
 
+/* Set the exact readable width for articles, talks, and pages */
 .page__content {
   width: 100% !important;
-  max-width: 100% !important;
-}*/
+  max-width: 950px !important; /* Increase from ~700px to 950px */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
