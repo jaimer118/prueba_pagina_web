@@ -1,0 +1,16 @@
+<div style="margin: 1.5rem 0; display: flex; justify-content: center;">
+  <add-to-calendar-button
+    name="{{ include.title | escape }}"
+    description="Fusion EP Talks: {{ include.title | escape }}. More details and registration: {{ site.url }}{{ site.baseurl }}{{ page.url }}"
+    startDate="{{ page.date | date: '%Y-%m-%d' }}"
+    startTime="{{ include.start_time | default: '16:00' }}"
+    endTime="{{ include.end_time | default: '17:00' }}"
+    timeZone="{{ include.timezone | default: 'Europe/Madrid' }}"
+    location="{{ include.platform | default: 'Online via Zoom' }}"
+    options="'Google','Apple','Outlook.com','iCal'"
+    buttonsList
+    hideBackground
+    lightMode="bodyScheme"
+    label="Add to Calendar"
+  ></add-to-calendar-button>
+</div>
