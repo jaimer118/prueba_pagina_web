@@ -15,7 +15,7 @@ slides_url: "https://ejemplo.com/diapositivas.pdf"
 author_profile: false
 ---
 
-<img src="{{ page.header.teaser | relative_url }}" alt="Speaker miniature" style="float: right; width: 180px; max-width: 35%; margin-left: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+
 
 **Speaker:** {{ page.speaker }}  
 **Position and Institution:** {{ page.affiliation }}  
