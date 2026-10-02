@@ -23,7 +23,7 @@ author_profile: false
 
 **Speaker:** {{ page.speaker }}  
 **Position and Institution:** {{ page.affiliation }}  
-**Date & Time:** {{ page.date | date: "%B %d, %Y" }} at {{ page.time }}  
+**Date & Time:** {{ page.date | date: "%B %d, %Y" }} at {{ page.time_display }}
 **Platform:** {{ page.platform }}  
 
 <div style="clear: both; margin-top: 1.5rem;"></div>
