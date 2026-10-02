@@ -77,10 +77,10 @@ $navicon-link-color-hover:  $brand-green !default;
    Comprehensive Layout Control for Minimal Mistakes
    ========================================================================== */
 
-/* 1. Global #main wrapper: allow it to scale fully so /talks/ can go edge-to-edge */
+/* 1. Global #main wrapper */
 #main {
   width: 100% !important;
-  max-width: 1400px !important; /* High upper limit for large displays */
+  max-width: 1400px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 1.5rem !important;
@@ -103,7 +103,7 @@ $navicon-link-color-hover:  $brand-green !default;
 /* 2. Fix the Home Page (layout: home uses .archive) */
 .layout--home .archive {
   width: 100% !important;
-  max-width: 1000px !important; /* Expands home page nicely */
+  max-width: 1000px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   float: none !important;
@@ -112,7 +112,7 @@ $navicon-link-color-hover:  $brand-green !default;
 /* 3. Balanced width for standard content pages (Posts, About, Contact) */
 .layout--single .page__content {
   width: 100% !important;
-  max-width: 980px !important; /* Balanced readability */
+  max-width: 980px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   float: none !important;
@@ -146,7 +146,6 @@ a.btn--whatsapp {
   border-color: #25d366 !important;
   text-decoration: none !important;
 
-  /* Force icon and text label inside to remain white */
   i,
   span {
     color: #ffffff !important;
@@ -168,7 +167,6 @@ a.btn--whatsapp {
   }
 }
 
-
 /* ==========================================================================
    Footer Customization
    ========================================================================== */
@@ -177,17 +175,15 @@ a.btn--whatsapp {
   background-color: #f8f9fa !important;
   color: #4b5563 !important;
 
-  /* Social icon styling */
   .social-icons a {
     color: #4b5563 !important;
     transition: color 0.2s ease-in-out;
 
     &:hover {
-      color: #009639 !important; /* Brand green */
+      color: #009639 !important;
     }
   }
 
-  /* Custom institutional footer links */
   .page__footer-custom a {
     color: #4b5563 !important;
 
