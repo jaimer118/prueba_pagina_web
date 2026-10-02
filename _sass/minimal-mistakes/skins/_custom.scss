@@ -137,3 +137,16 @@ add-to-calendar-button {
   --btn-radius: 6px !important;
   --font: inherit !important;
 }
+
+/* Social Sharing: WhatsApp Button */
+.btn--whatsapp {
+  background-color: #25d366 !important;
+  color: #ffffff !important;
+  border-color: #25d366 !important;
+
+  &:hover {
+    background-color: #1da851 !important;
+    border-color: #1da851 !important;
+    color: #ffffff !important;
+  }
+}
