@@ -2,6 +2,7 @@
 title: "Who we are"
 layout: single
 permalink: /about/
+classes: wide
 author_profile: false
 ---
 
