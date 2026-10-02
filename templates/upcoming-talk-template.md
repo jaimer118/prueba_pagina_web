@@ -10,7 +10,9 @@ header:
   teaser: /assets/images/charlas/talk-poster.png
 speaker: "Dr. Full Name"
 affiliation: "Research Institution / University"
-time: "16:00 CET"
+start_time: "16:00"
+end_time: "17:00"
+time_display: "16:00 - 17:00 CET"
 platform: "Online via Zoom"
 registration_url: "https://zoom.us/webinar/register/example-link"
 author_profile: false
@@ -31,6 +33,14 @@ Join us live for this upcoming session. Registration is completely free and open
     Register to Attend
   </a>
 </p>
+
+<!-- Calendar Dropdown Button -->
+{% include add-to-calendar.html 
+   title=page.title 
+   start_time=page.start_time 
+   end_time=page.end_time 
+   platform=page.platform 
+%}
 
 > **Note:** The full video recording and presentation slides will be published on this page shortly after the live session.
 
