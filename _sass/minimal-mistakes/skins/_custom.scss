@@ -167,3 +167,32 @@ a.btn--whatsapp {
     }
   }
 }
+
+
+/* ==========================================================================
+   Footer Customization
+   ========================================================================== */
+
+.page__footer {
+  background-color: #f8f9fa !important;
+  color: #4b5563 !important;
+
+  /* Social icon styling */
+  .social-icons a {
+    color: #4b5563 !important;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: #009639 !important; /* Brand green */
+    }
+  }
+
+  /* Custom institutional footer links */
+  .page__footer-custom a {
+    color: #4b5563 !important;
+
+    &:hover {
+      color: #009639 !important;
+    }
+  }
+}
