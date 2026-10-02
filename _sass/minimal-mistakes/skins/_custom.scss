@@ -138,15 +138,32 @@ add-to-calendar-button {
   --font: inherit !important;
 }
 
-/* Social Sharing: WhatsApp Button */
-.btn--whatsapp {
+/* Social Sharing: WhatsApp Button (Solid Brand Green) */
+.btn--whatsapp,
+a.btn--whatsapp {
   background-color: #25d366 !important;
   color: #ffffff !important;
   border-color: #25d366 !important;
+  text-decoration: none !important;
 
-  &:hover {
+  /* Force icon and text label inside to remain white */
+  i,
+  span {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
     background-color: #1da851 !important;
     border-color: #1da851 !important;
     color: #ffffff !important;
+
+    i,
+    span {
+      color: #ffffff !important;
+      fill: #ffffff !important;
+    }
   }
 }
