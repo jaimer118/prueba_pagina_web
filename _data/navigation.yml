@@ -4,6 +4,10 @@ main:
     url: /
   - title: "Talks"
     url: /talks/
+  - title: "Resources"
+    url: /resources/
+  - title: "Opportunities"
+    url: /opportunities/
   - title: "Contact"
     url: /contact/
   - title: "About"
