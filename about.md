@@ -90,11 +90,7 @@ author_profile: false
 
 **Fusion EP Talks** is an academic seminar initiative founded and coordinated by students and alumni of the **European Master in Nuclear Fusion Science and Engineering Physics (FUSION-EP)**. 
 
-Our mission is to bridge the gap between academic curricula and cutting-edge research in magnetic confinement fusion and plasma physics. By hosting interactive, open-access virtual seminars with leading researchers, engineers, and early-career scientists worldwide, we provide a collaborative hub to discuss key advancements across:
-
-* **Magnetic confinement systems:** Tokamaks, stellarators, and alternative concepts.
-* **Theory and computational modeling:** Gyrokinetics, turbulence, magnetohydrodynamics (MHD), and transport.
-* **Fusion technologies:** Heating systems (NBI, ECRH, ICRH), diagnostics, materials science, and power plant engineering.
+Our mission is to bridge the gap between academic curricula and cutting-edge research in magnetic confinement fusion and plasma physics. By hosting interactive, open-access virtual seminars with leading researchers, engineers, and early-career scientists worldwide, we provide a collaborative hub to discuss key advancements across.
 
 All sessions are held live online with interactive Q&A periods, with materials and recordings published under open-access principles for students and researchers globally.
 
