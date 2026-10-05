@@ -1,0 +1,18 @@
+- title: "Guiding-Center Motion & Magnetic Mirror Trapping"
+  category: "Particle Orbits"
+  description: "Numerical integration of single charged particle trajectories in a magnetic mirror geometry demonstrating magnetic moment conservation (mu) and pitch-angle reflection."
+  media_type: "video" # "video" or "image"
+  media_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" # Replace with your mp4/webm/gif
+  poster_url: "/assets/images/site-preview.png"
+  code_repo: "https://github.com/jaimer118/prueba_pagina_web"
+  language: "Python"
+  citation: "Fusion EP Talks - Numerical Plasma Physics Workshop (2026)."
+
+- title: "Poincaré Surface of Section in Non-Axisymmetric Fields"
+  category: "Magnetic Geometry"
+  description: "Puncture plot tracing field line trajectories through non-axisymmetric magnetic perturbations, visualizing nested flux surfaces, magnetic islands, and chaotic stochastic layers."
+  media_type: "image"
+  media_url: "/assets/images/site-preview.png" # Replace with your plot / gif
+  code_repo: "https://github.com/jaimer118/prueba_pagina_web"
+  language: "Python / Matplotlib"
+  citation: "Fusion EP Talks - Numerical Plasma Physics Workshop (2026)."
