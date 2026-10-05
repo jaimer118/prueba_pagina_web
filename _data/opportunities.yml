@@ -1,0 +1,71 @@
+# ==============================================================================
+# FUSION EP Talks - Opportunities Board Data
+# Types: "master" | "phd" | "school" | "internship"
+# Deadlines: "YYYY-MM-DD" or "ongoing"
+# ==============================================================================
+
+# --- Master's Degree Programmes ---
+- title: "European Master in Nuclear Fusion Science and Engineering Physics (FUSION-EP)"
+  type: "master"
+  institution: "FUSION-EP Consortium (Ghent, Lorraine, UC3M, AMU, Stuttgart, Padova, IST)"
+  location: "Europe (Multi-track Mobility)"
+  deadline: "2027-01-31"
+  link: "https://www.fusion-ep.eu/"
+  description: "Erasmus Mundus Joint Master Degree providing comprehensive training in magnetic confinement, plasma diagnostics, materials, and computational modeling across leading European universities."
+  funding: "Erasmus+ scholarships available"
+
+- title: "MSc in Science and Technology of Nuclear Fusion"
+  type: "master"
+  institution: "Eindhoven University of Technology (TU/e)"
+  location: "Eindhoven, Netherlands"
+  deadline: "ongoing"
+  link: "https://www.tue.nl/en/education/graduate-school/master-science-and-technology-of-nuclear-fusion/"
+  description: "Dedicated master's degree focusing on tokamak physics, power plant engineering, RF heating, and reactor diagnostics with direct integration into DIFFER."
+  funding: "Tuition fee subsidies & university grants"
+
+- title: "Master de Physique des Plasmas et de la Fusion (PPF)"
+  type: "master"
+  institution: "Sorbonne Université / Université Paris-Saclay / Institut Polytechnique de Paris"
+  location: "Paris, France"
+  deadline: "ongoing"
+  link: "https://www.lpp.fr/?Master-PPF"
+  description: "Advanced French master track covering basic plasma physics, astrophysical plasmas, inertial confinement (laser-plasma), and magnetic fusion."
+  funding: "National & university master stipends"
+
+# --- PhD Positions ---
+- title: "PhD Position: Gyrokinetic Turbulence Simulations for Stellarators"
+  type: "phd"
+  institution: "Max Planck Institute for Plasma Physics (IPP)"
+  location: "Greifswald, Germany"
+  deadline: "2026-12-15"
+  link: "https://www.ipp.mpg.de/careers"
+  description: "Investigation of microturbulent transport and zonal flows in optimized 3D magnetic geometries using massively parallel gyrokinetic codes (GENE/stella)."
+  funding: "Fully funded (TVöD 13 / MPG doctoral contract)"
+
+- title: "PhD Candidacy: Integrated Core-Edge Plasma Transport in Tokamaks"
+  type: "phd"
+  institution: "Swiss Plasma Center (SPC), EPFL"
+  location: "Lausanne, Switzerland"
+  deadline: "2026-11-30"
+  link: "https://www.epfl.ch/research/domains/spc/"
+  description: "Modeling divertor detachment and scrape-off layer transport interacting with core confinement on the TCV tokamak."
+  funding: "Full Swiss doctoral assistant contract"
+
+# --- Summer Schools & Internships ---
+- title: "Culham Plasma Physics Summer School (UKAEA)"
+  type: "school"
+  institution: "UKAEA / Culham Centre for Fusion Energy"
+  location: "Culham & Oxford, United Kingdom"
+  deadline: "2027-05-15"
+  link: "https://ccfe.ukaea.uk/"
+  description: "Two-week intensive summer school covering fundamentals of plasma physics, tokamaks, spherical tokamaks (MAST-U), and astrophysics with laboratory tours."
+  funding: "Subsidized accommodation & registration"
+
+- title: "FuseNet Master Student Internship Grants"
+  type: "internship"
+  institution: "The European Fusion Education Network (FuseNet)"
+  location: "European Laboratories"
+  deadline: "ongoing"
+  link: "https://fusenet.eu/funds"
+  description: "Financial mobility support for European master students conducting thesis research or internships at a fusion research facility outside their home country."
+  funding: "Travel & living allowance grant"
