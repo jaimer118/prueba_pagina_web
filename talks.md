@@ -7,16 +7,21 @@ author_profile: false
 ---
 
 <style>
-  /* Filter bar styling */
-  .filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  /* Filter Container */
+  .filter-wrapper {
     margin: 1.5rem 0 2.5rem 0;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e5e7eb;
   }
 
+  .primary-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  /* Base Filter Button */
   .filter-btn {
     appearance: none;
     border: 1px solid #d1d5db;
@@ -24,10 +29,13 @@ author_profile: false
     color: #374151;
     font-size: 0.85rem;
     font-weight: 600;
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1rem;
     border-radius: 9999px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   .filter-btn:hover {
@@ -40,6 +48,93 @@ author_profile: false
     border-color: #009639;
     color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 150, 57, 0.2);
+  }
+
+  /* Tag Drawer Toggle */
+  .btn--toggle-tags {
+    border-style: dashed;
+    background-color: #f9fafb;
+  }
+  .btn--toggle-tags.open {
+    background-color: #e5e7eb;
+    border-color: #9ca3af;
+    color: #111827;
+  }
+
+  /* Clear Button (hidden by default) */
+  .btn--clear {
+    display: none;
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+    color: #b91c1c;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.8rem;
+  }
+  .btn--clear:hover {
+    background-color: #fecaca;
+    color: #991b1b;
+    border-color: #f87171;
+  }
+  .btn--clear.visible {
+    display: inline-flex;
+  }
+
+  /* Expandable Tag Drawer */
+  .tag-drawer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.25s ease;
+    opacity: 0;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 0 1rem;
+    border-radius: 8px;
+  }
+
+  .tag-drawer.is-open {
+    max-height: 250px;
+    opacity: 1;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  /* Topic Tag Pills inside Drawer */
+  .tag-pill {
+    appearance: none;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+  }
+
+  .tag-pill:hover {
+    border-color: #009639;
+    color: #009639;
+  }
+
+  .tag-pill.active {
+    background-color: #009639;
+    border-color: #009639;
+    color: #ffffff;
+  }
+
+  .tag-pill .tag-check {
+    display: none;
+    margin-left: 0.3rem;
+  }
+  .tag-pill.active .tag-check {
+    display: inline;
   }
 
   /* Status Badges */
@@ -62,7 +157,7 @@ author_profile: false
     color: #4b5563;
   }
 
-  /* Tag pills inside post cards */
+  /* Post Card Tags */
   .post-tag {
     display: inline-block;
     font-size: 0.75rem;
@@ -74,7 +169,7 @@ author_profile: false
     margin-top: 0.35rem;
   }
 
-  /* Talk card animation */
+  /* Talk Card Layout */
   .talk-card {
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +178,7 @@ author_profile: false
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 2rem;
     width: 100%;
-    transition: opacity 0.25s ease;
+    transition: opacity 0.2s ease;
   }
 
   .talk-card.is-hidden {
@@ -99,22 +194,44 @@ author_profile: false
   }
 </style>
 
-Explore recordings and register for upcoming seminars organized by *Fusion EP Talks*. Filter by topic or session type below.
+Explore recordings and register for upcoming seminars organized by *Fusion EP Talks*.
 
-<!-- Tag & Status Filter Buttons -->
-<div class="filter-container" id="filter-bar">
-  <button class="filter-btn active" data-filter="all">All Talks</button>
-  <button class="filter-btn" data-filter="upcoming">🟢 Upcoming</button>
-  <button class="filter-btn" data-filter="tokamaks">Tokamaks</button>
-  <button class="filter-btn" data-filter="stellarators">Stellarators</button>
-  <button class="filter-btn" data-filter="turbulence">Turbulence & Transport</button>
-  <button class="filter-btn" data-filter="diagnostics">Diagnostics</button>
-  <button class="filter-btn" data-filter="theory">Theory & Modeling</button>
+<div class="filter-wrapper">
+  <!-- Primary Filter Bar -->
+  <div class="primary-filters">
+    <button class="filter-btn active" id="btn-all" data-status="all">All Talks</button>
+    <button class="filter-btn" data-status="upcoming">🟢 Upcoming</button>
+    <button class="filter-btn" data-status="recorded">Recorded</button>
+
+    <!-- Expand / Collapse Tag Drawer -->
+    <button class="filter-btn btn--toggle-tags" id="toggle-tags-btn" type="button">
+      <span>🏷️ Filter by Topics</span>
+      <span id="toggle-indicator">▾</span>
+      <span id="active-tag-count" style="display:none; background:#009639; color:#fff; font-size:0.7rem; border-radius:9999px; padding:0.1rem 0.45rem; margin-left:0.2rem;">0</span>
+    </button>
+
+    <!-- Reset / Clear Everything -->
+    <button class="filter-btn btn--clear" id="btn-clear" type="button">
+      ✕ Clear filters
+    </button>
+  </div>
+
+  <!-- Expandable Tag Drawer (Multi-select) -->
+  <div class="tag-drawer" id="tag-drawer">
+    <span style="font-size:0.8rem; font-weight:600; color:#6b7280; margin-right:0.5rem;">Select topics:</span>
+    <button class="tag-pill" data-tag="tokamaks">Tokamaks <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="stellarators">Stellarators <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="turbulence">Turbulence & Transport <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="mhd">MHD & Stability <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="diagnostics">Diagnostics <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="theory">Theory & Modeling <span class="tag-check">✓</span></button>
+    <button class="tag-pill" data-tag="materials">Materials & Divertor <span class="tag-check">✓</span></button>
+  </div>
 </div>
 
-<!-- Empty search notice -->
+<!-- Empty Result Notice -->
 <div id="no-talks-message">
-  <p>No seminars match the selected filter.</p>
+  <p>No seminars match all selected criteria.</p>
 </div>
 
 <!-- List of Talks -->
@@ -126,14 +243,12 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
     {% assign is_recorded = true %}
   {% endif %}
 
-  <!-- Join tags into a space-separated lowercase string for easy querying -->
   {% capture post_tags %}{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}{% endcapture %}
 
   <div class="talk-card" 
        data-status="{% if is_recorded %}recorded{% else %}upcoming{% endif %}" 
        data-tags="{{ post_tags | strip }}">
     
-    <!-- Teaser Image -->
     {% if post.header.teaser %}
       <div style="flex: 0 0 300px; max-width: 100%;">
         <a href="{{ post.url | relative_url }}">
@@ -142,10 +257,7 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
       </div>
     {% endif %}
 
-    <!-- Card Content -->
     <div style="flex: 1 1 350px;">
-      
-      <!-- Status Badge -->
       {% if is_recorded %}
         <span class="status-badge status-badge--recorded">Recorded</span>
       {% else %}
@@ -163,7 +275,6 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
         {% endif %}
       </p>
 
-      <!-- Topic Tags Display -->
       {% if post.tags and post.tags.size > 0 %}
         <div style="margin-bottom: 0.8rem;">
           {% for tag in post.tags %}
@@ -189,52 +300,132 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
 {% endfor %}
 </div>
 
-<!-- Pure Vanilla JS for Instant Filtering -->
+<!-- Multi-Select & Drawer Logic -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filter-btn");
+    const toggleBtn = document.getElementById("toggle-tags-btn");
+    const toggleIndicator = document.getElementById("toggle-indicator");
+    const tagDrawer = document.getElementById("tag-drawer");
+    const tagCountBadge = document.getElementById("active-tag-count");
+    const clearBtn = document.getElementById("btn-clear");
+    const btnAll = document.getElementById("btn-all");
+
+    const statusButtons = document.querySelectorAll("[data-status]");
+    const tagPills = document.querySelectorAll(".tag-pill");
     const talkCards = document.querySelectorAll(".talk-card");
     const noResultsMsg = document.getElementById("no-talks-message");
 
-    filterButtons.forEach(button => {
-      button.addEventListener("click", function () {
-        // Toggle active button class
-        filterButtons.forEach(btn => btn.classList.remove("active"));
+    let currentStatus = "all";
+    let activeTags = new Set();
+
+    // 1. Toggle Drawer
+    toggleBtn.addEventListener("click", function () {
+      const isOpen = tagDrawer.classList.toggle("is-open");
+      toggleBtn.classList.toggle("open", isOpen);
+      toggleIndicator.textContent = isOpen ? "▴" : "▾";
+    });
+
+    // 2. Status Selection (All / Upcoming / Recorded)
+    statusButtons.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const selected = this.getAttribute("data-status");
+
+        if (selected === "all") {
+          // Reset everything when "All Talks" is clicked
+          resetAllFilters();
+          return;
+        }
+
+        statusButtons.forEach(b => b.classList.remove("active"));
         this.classList.add("active");
+        currentStatus = selected;
+        btnAll.classList.remove("active");
 
-        const selectedFilter = this.getAttribute("data-filter").toLowerCase();
-        let visibleCount = 0;
+        applyFilters();
+      });
+    });
 
-        talkCards.forEach(card => {
-          const cardTags = card.getAttribute("data-tags") || "";
-          const cardStatus = card.getAttribute("data-status") || "";
+    // 3. Multi-Select Topic Tags Toggle
+    tagPills.forEach(pill => {
+      pill.addEventListener("click", function () {
+        const tag = this.getAttribute("data-tag").toLowerCase();
 
-          let matches = false;
+        if (activeTags.has(tag)) {
+          activeTags.delete(tag);
+          this.classList.remove("active");
+        } else {
+          activeTags.add(tag);
+          this.classList.add("active");
+        }
 
-          if (selectedFilter === "all") {
-            matches = true;
-          } else if (selectedFilter === "upcoming" || selectedFilter === "recorded") {
-            matches = (cardStatus === selectedFilter);
-          } else {
-            // Check if tag is present in the space-delimited string
-            matches = cardTags.split(" ").includes(selectedFilter);
-          }
+        btnAll.classList.remove("active");
+        updateDrawerBadge();
+        applyFilters();
+      });
+    });
 
-          if (matches) {
-            card.classList.remove("is-hidden");
-            visibleCount++;
-          } else {
-            card.classList.add("is-hidden");
+    // 4. Clear Filters Action
+    clearBtn.addEventListener("click", resetAllFilters);
+
+    function resetAllFilters() {
+      currentStatus = "all";
+      activeTags.clear();
+
+      statusButtons.forEach(b => b.classList.remove("active"));
+      btnAll.classList.add("active");
+
+      tagPills.forEach(p => p.classList.remove("active"));
+
+      updateDrawerBadge();
+      applyFilters();
+    }
+
+    function updateDrawerBadge() {
+      const count = activeTags.size;
+      if (count > 0) {
+        tagCountBadge.textContent = count;
+        tagCountBadge.style.display = "inline";
+      } else {
+        tagCountBadge.style.display = "none";
+      }
+    }
+
+    // 5. Apply Filter Logic (AND logic: card must match all active tags)
+    function applyFilters() {
+      let visibleCount = 0;
+      const isFiltered = currentStatus !== "all" || activeTags.size > 0;
+
+      // Show/hide Clear button
+      if (isFiltered) {
+        clearBtn.classList.add("visible");
+      } else {
+        clearBtn.classList.remove("visible");
+      }
+
+      talkCards.forEach(card => {
+        const cardStatus = card.getAttribute("data-status") || "";
+        const rawCardTags = (card.getAttribute("data-tags") || "").split(" ").filter(Boolean);
+
+        // Status check
+        const matchesStatus = (currentStatus === "all" || cardStatus === currentStatus);
+
+        // Tags check: does the card have EVERY tag in activeTags?
+        let matchesTags = true;
+        activeTags.forEach(tag => {
+          if (!rawCardTags.includes(tag)) {
+            matchesTags = false;
           }
         });
 
-        // Display empty message if no talks match
-        if (visibleCount === 0) {
-          noResultsMsg.style.display = "block";
+        if (matchesStatus && matchesTags) {
+          card.classList.remove("is-hidden");
+          visibleCount++;
         } else {
-          noResultsMsg.style.display = "none";
+          card.classList.add("is-hidden");
         }
       });
-    });
+
+      noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
+    }
   });
 </script>
