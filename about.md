@@ -144,6 +144,19 @@ The initiative is maintained by an active volunteer team managing speaker invita
     </div>
   </div>
 
+  <div class="team-card">
+    <div>
+      <h4>Name Surname</h4>
+      <div class="role">Audiovisual & Web Administration</div>
+      <div class="affiliation">Research Assistant<br><em>Institution / University</em></div>
+    </div>
+    <div class="links">
+      <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
 </div>
 
 ---
@@ -188,13 +201,12 @@ To ensure advanced fusion research is accessible across international student ne
 
 The organizers and core contributors of *Fusion EP Talks* stem from the consortium universities participating in the **European Master in Nuclear Fusion Science and Engineering Physics (FUSION-EP)**, alongside partner institutions and laboratories across Europe and worldwide:
 
+* **Aix-Marseille Université** (France)
 * **Ghent University** (Belgium)
 * **Université de Lorraine** (France)
 * **Universidad Carlos III de Madrid** (Spain)
-* **Aix-Marseille Université** (France)
 * **Universität Stuttgart** (Germany)
-* **Università degli Studi di Padova** (Italy)
-* **Instituto Superior Técnico** (Portugal)
+* **Universidad Complutense de Madrid** (Spain)
 
 *Note: Fusion EP Talks is an independent, student-led academic initiative and does not officially represent the administrative governance of the Erasmus Mundus master's consortium.*
 
