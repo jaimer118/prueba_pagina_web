@@ -203,6 +203,7 @@ The organizers and core contributors of *Fusion EP Talks* stem from the consorti
 * **Universidad Carlos III de Madrid** (Spain)
 * **Universität Stuttgart** (Germany)
 * **Universidad Complutense de Madrid** (Spain)
+* **České vysoké učení technické v Praze (CVUT-CTU), Prague** (Czech Republic)
 
 *Note: Fusion EP Talks is an independent, student-led academic initiative and does not officially represent the administrative governance of the Erasmus Mundus master's consortium.*
 
