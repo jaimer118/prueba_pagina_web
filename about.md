@@ -157,7 +157,7 @@ The initiative is maintained by an active volunteer team managing speaker invita
 
 ---
 
-## Localization & Translation Team
+## Translation Team
 
 To ensure advanced fusion research is accessible across international student networks, our seminar abstracts, slide notes, and video materials are localized thanks to our dedicated volunteer translators:
 
