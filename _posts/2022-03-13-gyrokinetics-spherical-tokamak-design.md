@@ -8,9 +8,9 @@ tags:
   - plasma-physics
 header:
   teaser: /assets/images/talks_teaser/robert_davies.png
-speaker: "Dr. Michele Marin"
-affiliation: "EPFL, Switzerland"
-youtube_id: "oZbH9851Fa0"
+speaker: "Dr. Robert Davies"
+affiliation: "Max Planck Institute for Plasma Physics, Greiswald, Germany"
+youtube_id: "yo4zeWQNTvs"
 
 # ==============================================================================
 # SLIDES CONFIGURATION:
@@ -51,4 +51,4 @@ author_profile: false
 ---
 
 ### Abstract
-Accurately reproducing the plasma dynamics requires complex simulations, which can take considerable computing resources. Reduced models can greatly speed up the process, but this comes at the cost of assumptions and simplifications. Therefore, these faster models need to be carefully validated and compared with other codes and with the experiments. Integrated modelling is a technique that evolves a number of the tokamak subsystems at the same time, improving consistency and easing the comparison with experiments. The talk includes integrated modelling, its validation cycle and examples of applications.
+Now is an exciting time for magnetic confinement fusion, with a great deal of private and public interest in a variety of reactor concepts. However, a major consideration for the design and operation of commercially viable fusion power plants is plasma turbulence, which constrains the energy confinement, density and temperature in the plasma. In this talk, I describe how plasma turbulence (and the spatially small instabilities which drive it, called "microinstabilities") can be simulated using gyrokinetic codes. These simulations can be used to understand and predict experimental results, but also to assess the viability of hypothetical fusion plasmas. In this way, gyrokinetics can be used to influence reactor design. As a specific example of this, I describe how a particular microinstability (the "kinetic ballooning mode") provides a constraint on the plasma shape for commercially viable spherical tokamak (ST) power plants.
