@@ -1,6 +1,6 @@
 ---
 title: "Foundations & applications of modern data science in fusion"
-date: 2023-05-30
+date: 2022-05-30
 categories:
   - talks
 tags:
