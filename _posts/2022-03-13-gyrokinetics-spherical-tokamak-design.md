@@ -9,7 +9,7 @@ tags:
 header:
   teaser: /assets/images/talks_teaser/robert_davies.png
 speaker: "Dr. Robert Davies"
-affiliation: "Max Planck Institute for Plasma Physics, Greiswald, Germany"
+affiliation: "Max Planck Institute for Plasma Physics, Greifswald, Germany"
 youtube_id: "yo4zeWQNTvs"
 
 # ==============================================================================
