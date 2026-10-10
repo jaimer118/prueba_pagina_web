@@ -1,5 +1,5 @@
 ---
-title: "Developing Tungsten-Diamond Composites for Fusion Applications"
+title: "Understanding the plasma with integrated modelling"
 date: 2022-03-15
 categories:
   - talks
