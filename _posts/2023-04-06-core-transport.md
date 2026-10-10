@@ -1,6 +1,6 @@
 ---
 title: "Integrated core transport modeling of NSTX plasmas using the OMFIT workflow"
-date: 2026-10-15
+date: 2023-04-06
 categories:
   - talks
 tags:
@@ -12,7 +12,7 @@ header:
 speaker: "Dra. Galina Avdeeva"
 affiliation: "Oak Ridge Associated Universities (General Atomics)"
 youtube_id: "JwrlB9ZOPjc"
-slides_url: "https://ejemplo.com/diapositivas.pdf"
+slides_url: ""
 author_profile: false
 ---
 
