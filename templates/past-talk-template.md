@@ -11,7 +11,14 @@ header:
 speaker: "Dr. Full Name"
 affiliation: "Research Institution / University"
 youtube_id: "JwrlB9ZOPjc"
-slides_url: "/assets/slides/presentation.pdf"
+
+# ==============================================================================
+# SLIDES CONFIGURATION:
+# - With slides:    Uncomment the line below and set the local path or URL.
+# - Without slides: Keep the line commented out (#) or delete it entirely.
+# ==============================================================================
+# slides_url: "/assets/slides/presentation.pdf"
+
 author_profile: false
 ---
 
@@ -24,15 +31,22 @@ author_profile: false
 
 <div style="clear: both; margin-top: 1.5rem;"></div>
 
+{% if page.youtube_id %}
 ### Recording
 
 {% include video id=page.youtube_id provider="youtube" %}
 
-<p style="text-align: center; margin-top: 1rem;">
-  <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">
-    <i class="fab fa-youtube"></i> Open directly on YouTube
+<p style="text-align: center; margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+  <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+    <i class="fab fa-youtube"></i> Watch on YouTube
   </a>
+  {% if page.slides_url %}
+  <a href="{{ page.slides_url | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn btn--inverse">
+    <i class="fas fa-file-pdf"></i> Download Slides (PDF)
+  </a>
+  {% endif %}
 </p>
+{% endif %}
 
 ---
 
