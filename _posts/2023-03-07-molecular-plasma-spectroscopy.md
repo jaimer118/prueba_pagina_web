@@ -7,10 +7,10 @@ tags:
   - fusion
   - plasma-physics
 header:
-  teaser: /assets/images/charlas/talk-poster.png
-speaker: "Dr. Full Name"
-affiliation: "Research Institution / University"
-youtube_id: "JwrlB9ZOPjc"
+  teaser: /assets/images/talks_teaser/ewa_pawelec.png
+speaker: "Prof. Dr. Ewa Pawelec"
+affiliation: "University of Opole, Poland"
+youtube_id: "7i1J9x0TcBQ"
 
 # ==============================================================================
 # SLIDES CONFIGURATION:
@@ -51,6 +51,6 @@ author_profile: false
 ---
 
 ### Abstract
-Summary of the presentation, covering theoretical foundations, key simulation benchmarks, or experimental diagnostic findings.
+Magnetic confinement fusion ordinarily is not connected with molecular spectroscopy, because most of the interest is directed at the hot core and confining pedestal. Nevertheless, the plasma spreads out of those regions and, at certain point touches the walls, so at in this region it is, by every measure, a low-temperature, if certainly very specific plasma. In the regions close enough to the vessel walls, the nearly-total ionization of the core and pedestal regions is not present anymore, and atoms, molecules and molecular ions strongly contribute to the overall mixture. Their presence influences both the overall plasma behavior and the vessel walls erosion, which contributes to the impurities permeating the pedestal and core plasma. Most important molecules in the magnetic confinement fusion are the hydrogen-containing ones, from the hydrogenic species in different isotopic combinations (H2, D2, T2 and mixed) to all kinds of hydride, created where the hydrogenic plasma encounters other elements. Those other elements can be present in the walls, such as beryllium, tungsten, boron or carbon, or be one of the seeded impurities, like nitrogen. In those reactions different hydrides may be created. Most important are the metallic hydrides, especially BeH/D/T, which contribute to the wall erosion by a process called CAPS (Chemical Assisted Physical Sputtering), which is also a process which may be detrimental both to the walls and to the pedestal and core plasma. The hydrogenic molecules are very important e.g. in the behavior of the divertor, where the detachment conditions are strongly affected by molecular processes. Spectroscopic study of molecules is not simple, because the spectra are complex, but on the other hand, it provides data on the creation process of the light-emitting molecular states. 
 
-Outline here the main conclusions and future research outlook presented during the session.
+In this presentation, examples of the spectra and their analyses will be taken from JET experiments and comprise different isotopologues of hydrogen molecule and beryllium and nitrogen hydride. It will also be shown how those results contribute to better understanding of different processes happening in the low-temperature regions of the magnetic confinement fusion plasma.
