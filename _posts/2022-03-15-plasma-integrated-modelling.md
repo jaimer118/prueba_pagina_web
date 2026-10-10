@@ -7,7 +7,7 @@ tags:
   - fusion
   - plasma-physics
 header:
-  teaser: /assets/images/talks_teaser/aneeqa_khan.png
+  teaser: /assets/images/talks_teaser/michele_marin.png
 speaker: "Dr. Michele Marin"
 affiliation: "EPFL, Switzerland"
 youtube_id: "oZbH9851Fa0"
