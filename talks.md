@@ -318,20 +318,19 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
     let currentStatus = "all";
     let activeTags = new Set();
 
-    // 1. Toggle Drawer
+    // 1. Toggle Drawer de etiquetas
     toggleBtn.addEventListener("click", function () {
       const isOpen = tagDrawer.classList.toggle("is-open");
       toggleBtn.classList.toggle("open", isOpen);
       toggleIndicator.textContent = isOpen ? "▴" : "▾";
     });
 
-    // 2. Status Selection (All / Upcoming / Recorded)
+    // 2. Selección de Estado (All / Upcoming / Recorded)
     statusButtons.forEach(btn => {
       btn.addEventListener("click", function () {
         const selected = this.getAttribute("data-status");
 
         if (selected === "all") {
-          // Reset everything when "All Talks" is clicked
           resetAllFilters();
           return;
         }
@@ -345,7 +344,7 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
       });
     });
 
-    // 3. Multi-Select Topic Tags Toggle
+    // 3. Multi-selección de tópicos
     tagPills.forEach(pill => {
       pill.addEventListener("click", function () {
         const tag = this.getAttribute("data-tag").toLowerCase();
@@ -364,7 +363,7 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
       });
     });
 
-    // 4. Clear Filters Action
+    // 4. Limpiar filtros
     clearBtn.addEventListener("click", resetAllFilters);
 
     function resetAllFilters() {
@@ -375,6 +374,13 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
       btnAll.classList.add("active");
 
       tagPills.forEach(p => p.classList.remove("active"));
+
+      // Cerrar cajón de tags si estaba abierto
+      if (tagDrawer.classList.contains("is-open")) {
+        tagDrawer.classList.remove("is-open");
+        toggleBtn.classList.remove("open");
+        toggleIndicator.textContent = "▾";
+      }
 
       updateDrawerBadge();
       applyFilters();
@@ -390,12 +396,11 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
       }
     }
 
-    // 5. Apply Filter Logic (AND logic: card must match all active tags)
+    // 5. Aplicar lógica de filtrado
     function applyFilters() {
       let visibleCount = 0;
       const isFiltered = currentStatus !== "all" || activeTags.size > 0;
 
-      // Show/hide Clear button
       if (isFiltered) {
         clearBtn.classList.add("visible");
       } else {
@@ -406,10 +411,8 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
         const cardStatus = card.getAttribute("data-status") || "";
         const rawCardTags = (card.getAttribute("data-tags") || "").split(" ").filter(Boolean);
 
-        // Status check
         const matchesStatus = (currentStatus === "all" || cardStatus === currentStatus);
 
-        // Tags check: does the card have EVERY tag in activeTags?
         let matchesTags = true;
         activeTags.forEach(tag => {
           if (!rawCardTags.includes(tag)) {
@@ -427,5 +430,15 @@ Explore recordings and register for upcoming seminars organized by *Fusion EP Ta
 
       noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
     }
+
+    // =========================================================================
+    // 6. FIX BFCache: Reset forzoso cuando el usuario pulsa "Atrás" en el navegador
+    // =========================================================================
+    window.addEventListener("pageshow", function (event) {
+      // event.persisted indica que la página se recuperó de la caché de navegación
+      if (event.persisted) {
+        resetAllFilters();
+      }
+    });
   });
 </script>
